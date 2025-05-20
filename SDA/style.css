@@ -1,0 +1,118 @@
+body {
+  background-color: #121212;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color:#b71c1c;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+  width: 300px;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #b71c1c;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #b71c1c;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 60px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.seat {
+  width: 60px;
+  height: 60px;
+  background-color: #424242;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.seat.filled {
+  background-color: #b71c1c;
+  transform: scale(1.1);
+}
+
+.visual-antrian {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.antrian-item {
+  background-color: #1976d2;
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  animation: fadeIn 0.5s ease;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #323232;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  opacity: 0;
+  animation: toastIn 0.5s forwards;
+}
+
+@keyframes toastIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
