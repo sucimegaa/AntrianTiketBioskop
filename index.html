@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulasi Antrian Tiket Bioskop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎟️ Antrian Tiket Bioskop </h1>
+
+    <div class="form">
+      <input type="text" id="namaInput" placeholder="Contoh: Dita, Budi, Rani" style="width: 60%;" />
+      <button onclick="tambahAntrian()">Tambah Antrian</button>
+    </div>
+
+    <div class="antrian-bar">
+      <h3>Antrian Saat Ini</h3>
+      <div id="visualAntrian" class="visual-antrian"></div>
+    </div>
+
+    <div class="seat-grid"></div>
+    <br />
+    <button onclick="layaniSatu()">Layani Satu Penonton</button>
+    <button onclick="resetKursi()">Reset Kursi</button>
+
+    <div class="loket">
+      <div class="antrian" id="antrian"></div>
+    </div>
+
+    <div class="kursi-section">
+      <div id="kursi-container" class="kursi-grid"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
