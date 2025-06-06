@@ -7,10 +7,10 @@
 </head>
 <body>
   <div class="container">
-    <h1>🎟️ Antrian Tiket Bioskop </h1>
+    <h1>🎟️ Antrian Tiket Bioskop</h1>
 
     <div class="form">
-      <input type="text" id="namaInput" placeholder="Contoh: Dita, Budi, Rani" style="width: 60%;" />
+      <input type="text" id="namaInput" placeholder="Contoh: Dita, Budi, Rani" />
       <button onclick="tambahAntrian()">Tambah Antrian</button>
     </div>
 
@@ -19,18 +19,24 @@
       <div id="visualAntrian" class="visual-antrian"></div>
     </div>
 
-    <div class="seat-grid"></div>
+    <div class="studio-wrapper">
+      <div>
+        <h3>Studio A</h3>
+        <div id="studioA" class="seat-grid"></div>
+      </div>
+      <div>
+        <h3>Studio B</h3>
+        <div id="studioB" class="seat-grid"></div>
+      </div>
+      <div>
+        <h3>Studio C</h3>
+        <div id="studioC" class="seat-grid"></div>
+      </div>
+    </div>
+
     <br />
-    <button onclick="layaniSatu()">Layani Satu Penonton</button>
-    <button onclick="resetKursi()">Reset Kursi</button>
-
-    <div class="loket">
-      <div class="antrian" id="antrian"></div>
-    </div>
-
-    <div class="kursi-section">
-      <div id="kursi-container" class="kursi-grid"></div>
-    </div>
+    <button onclick="layaniAntrian()">Layani Antrian</button>
+    <button onclick="resetKursi()">Reset Semua Kursi</button>
   </div>
 
   <script src="script.js"></script>
